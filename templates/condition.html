@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="background-color: green; color:cyan;">If Condition</h1>
+        {% if b > a %}
+          <h2>inside if</h2>
+          <h2>{{b}}</h2>
+        {% endif %}
+
+        <h1 style="background-color: blue; color:red;">If-else Condition</h1>
+        {% if b > a %}
+          <h2>inside if</h2>
+          <h2>{{b}}</h2>
+        {% else %}
+          <h2>inside else</h2>
+          <h2>{{a}}</h2>
+
+        {% endif %}
+        <h1 style="background-color: orange; color:lime;">If-elif Condition</h1>
+        {% if a > b and a > c %}
+          <h2>inside if</h2>
+          <h2>{{a}}</h2>
+        {% elif b > c %}
+          <h2>inside elif</h2>
+          <h2>{{b}}</h2>
+        {% else %}
+          <h2>inside else</h2>
+          <h2>{{c}}</h2>
+
+        {% endif %}
+        <h1 style="background-color: orange; color:lime;">nested if Condition</h1>
+        {% if a > b %}
+          {%if a > c %}
+            <h2>inside if if</h2>
+            <h2>{{a}}</h2>
+          {% else %}
+            <h2>inside if if else</h2>
+            <h2>{{c}}</h2>
+          {% endif %}
+        {% else %}
+          {%if b > c %}
+            <h2>inside else if</h2>
+            <h2>{{b}}</h2>
+          {% else %}
+            <h2>inside else if else</h2>
+            <h2>{{c}}</h2>
+           {% endif %}
+        {% endif %}
+
+    </center>
+</body>
+</html>
